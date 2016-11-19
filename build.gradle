@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'cz.sigler.android'
+version = '1.0-SNAPSHOT'
+
+description = """ActiveAndroid-Validation"""
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+
+
+repositories {
+        
+     maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'com.michaelpardo', name: 'activeandroid', version:'3.1.0-SNAPSHOT'
+    compile group: 'com.google.android', name: 'android', version:'2.3.3'
+    testCompile group: 'junit', name: 'junit', version:'4.11'
+    testCompile group: 'org.powermock', name: 'powermock-module-junit4', version:'1.5.1'
+    testCompile group: 'org.powermock', name: 'powermock-api-mockito', version:'1.5.1'
+    testCompile group: 'org.mockito', name: 'mockito-core', version:'1.9.5'
+    testCompile group: 'com.google.android', name: 'support-v4', version:'r7'
+}
